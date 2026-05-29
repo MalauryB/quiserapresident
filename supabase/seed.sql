@@ -3,7 +3,11 @@
 -- À exécuter dans Supabase APRÈS schema.sql
 -- ============================================
 
--- 0. Nettoyage (candidats d'abord à cause de la FK vers parti)
+-- 0. Compatibilité : s'assure que les colonnes ajoutées par migration existent
+--    (bases créées avant l'ajout de nom_court)
+ALTER TABLE candidat ADD COLUMN IF NOT EXISTS nom_court VARCHAR;
+
+-- 1. Nettoyage (candidats d'abord à cause de la FK vers parti)
 DELETE FROM candidat;
 DELETE FROM parti;
 DELETE FROM source_sondage;
@@ -18,7 +22,7 @@ INSERT INTO parti (tag, nom, actif, couleur_fond, couleur_texte, couleur_accent,
   ('RN',   'Rassemblement National', true, '#1B2A4A', '#EEEDFF', '#002395', '#002395'),
   ('REC',  'Reconquête',             true, '#1a1a2e', '#FFFFFF', '#2D2D5E', '#2D2D5E');
 
--- 2. Candidats (variantes) — valeurs alignées sur le modèle R v3
+-- 3. Candidats (variantes) — valeurs alignées sur le modèle R v3
 INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales, sonde_individuellement, groupe_sondage, attractivite, tendance, ideologie_gauche, ideologie_centre, ideologie_droite, taux_barrage, start_agrege, start_debiaise, start_personnalise, photo_url) VALUES
   -- LFI  (R: Ideo=(1,0,0), delta=0.5, psi=1, v0=0.12)
   ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 14.5, 13, 12, NULL),
@@ -45,7 +49,7 @@ INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales,
   ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.0,  0.0,  1.0,  0.5,  5.5, 5, 5.5, NULL),
   ('rec-1',  'REC',  1, 'Sarah Knafo',        'Knafo',       'SK',  false, 'Extrême droite',             0.0,  0.45, 0.0,  0.0,  1.0,  0.45,  4, 3.5, 4, NULL);
 
--- 3. Sources de sondage
+-- 4. Sources de sondage
 INSERT INTO source_sondage (type, libelle, description, icone) VALUES
   ('agrege',   'Sondage agrégé',   'Moyenne pondérée des derniers sondages publiés par les instituts majeurs.', '📊'),
   ('debiaise', 'Sondage débiaisé', 'Sondages corrigés des biais historiques des instituts (house effects).',    '🎯'),

@@ -25,26 +25,26 @@ INSERT INTO parti (tag, nom, actif, couleur_fond, couleur_texte, couleur_accent,
 -- 3. Candidats (variantes) — valeurs alignées sur le modèle R v3
 INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales, sonde_individuellement, groupe_sondage, attractivite, tendance, ideologie_gauche, ideologie_centre, ideologie_droite, taux_barrage, start_agrege, start_debiaise, start_personnalise, photo_url) VALUES
   -- LFI  (R: Ideo=(1,0,0), delta=0.5, psi=1, v0=0.12)
-  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 14.5, 13, 12, NULL),
+  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 14.5, 13, 14.5, NULL),
   ('lfi-1',  'LFI',  1, 'Mathilde Panot',     'Panot',       'MP',  false, NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 12, 13, 12, NULL),
   ('lfi-2',  'LFI',  2, 'Clémence Guetté',    'Guetté',      'CG',  false, NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 12, 13, 12, NULL),
   ('lfi-3',  'LFI',  3, 'Manuel Bompard',     'Bompard',     'MB',  false, NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 12, 13, 12, NULL),
   -- EELV (R: Ideo=(0.8,0.2,0), delta=0, psi=0, v0=0.09)
-  ('eelv-0', 'EELV', 0, 'Marine Tondelier',   'Tondelier',   'MT',  false, 'Les Écologistes',           0.0,  0.5,  0.8,  0.2,  0.0,  0.1,   3,  9,  9, NULL),
+  ('eelv-0', 'EELV', 0, 'Marine Tondelier',   'Tondelier',   'MT',  false, 'Les Écologistes',           0.0,  0.5,  0.8,  0.2,  0.0,  0.1,   3,  9,  3, NULL),
   ('eelv-1', 'EELV', 1, 'François Ruffin',    'Ruffin',      'FR',  false, 'Debout',                    0.1,  0.55, 0.8,  0.2,  0.0,  0.12,  7,  7,  7, NULL),
   ('eelv-2', 'EELV', 2, 'Clémentine Autain',  'Autain',      'CA',  false, 'L''Après',                  0.0,  0.45, 0.8,  0.2,  0.0,  0.1,   5,  5,  5, NULL),
   -- PS   (R: Ideo=(0.5,0.5,0), delta=0, psi=0.5, v0=0.135)
-  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.5,  0.5,  0.0,  0.08, 10.5, 14, 13.5, NULL),
+  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.5,  0.5,  0.0,  0.08, 10.5, 14, 10.5, NULL),
   ('ps-1',   'PS',   1, 'François Hollande',  'Hollande',    'FH',  false, 'Parti Socialiste',           0.3,  0.4,  0.5,  0.5,  0.0,  0.1,   9,  9,  9, NULL),
   -- REN  (R: Ideo=(0,1,0), delta=-0.5, psi=0, v0=0.17)
-  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.0,  1.0,  0.0,  0.0,  12, 15, 16, NULL),
-  ('ren-1',  'REN',  1, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.0,  1.0,  0.0,  0.0,  16, 17, 18, NULL),
+  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.0,  1.0,  0.0,  0.0,  12, 15, 12, NULL),
+  ('ren-1',  'REN',  1, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.0,  1.0,  0.0,  0.0,  16, 17, 16, NULL),
   -- LR   (R: Ideo=(0,0.3,0.7), delta=0.2, psi=0.5, v0=0.08)
-  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.0,  0.3,  0.7,  0.25,  9.5,  9,  8, NULL),
+  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.0,  0.3,  0.7,  0.25,  9.5,  9,  9.5, NULL),
   ('lr-1',   'LR',   1, 'Laurent Wauquiez',   'Wauquiez',    'LW',  true,  NULL,                        0.4,  0.65, 0.0,  0.3,  0.7,  0.2,   9,  9,  9, NULL),
   -- RN   (R: Ideo=(0,0,1), delta=-0.2, psi=0, v0=0.35)
   ('rn-0',   'RN',   0, 'Jordan Bardella',    'Bardella',    'JB',  true,  NULL,                        0.0,  0.3,  0.0,  0.0,  1.0,  0.45, 33, 31, 33, NULL),
-  ('rn-1',   'RN',   1, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.0,  0.0,  1.0,  0.5,  32, 33, 35, NULL),
+  ('rn-1',   'RN',   1, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.0,  0.0,  1.0,  0.5,  32, 33, 32, NULL),
   -- REC  (R: Ideo=(0,0,1), delta=0, psi=0, v0=0.055)
   ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.0,  0.0,  1.0,  0.5,  5.5, 5, 5.5, NULL),
   ('rec-1',  'REC',  1, 'Sarah Knafo',        'Knafo',       'SK',  false, 'Extrême droite',             0.0,  0.45, 0.0,  0.0,  1.0,  0.45,  4, 3.5, 4, NULL);

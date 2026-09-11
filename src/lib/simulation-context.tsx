@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useCallback, useMemo, useEffect, type ReactNode } from "react";
 import type { PartyData, PartyColors, PollSource } from "@/types/simulation";
-import { DEFAULT_PARTIES, PARTY_COLORS, POLL_SOURCES, ELECTION_DATE } from "@/lib/constants";
+import { DEFAULT_PARTIES, PARTY_COLORS, POLL_SOURCES, ELECTION_DATE, GAMMA_REJET_ED, GAMMA_REJET_EG } from "@/lib/constants";
 import { getSelected } from "@/lib/simulation";
 
 interface SimulationContextValue {
@@ -34,8 +34,8 @@ export function SimulationProvider({ children }: { children: ReactNode }) {
   const [pollSources, setPollSources] = useState<PollSource[]>(POLL_SOURCES);
   const [pollSource, setPollSource] = useState("custom");
   const [loading, setLoading] = useState(true);
-  const [gammaRejetED, setGammaRejetED] = useState(4.909881);
-  const [gammaRejetEG, setGammaRejetEG] = useState(2.240084);
+  const [gammaRejetED, setGammaRejetED] = useState(GAMMA_REJET_ED);
+  const [gammaRejetEG, setGammaRejetEG] = useState(GAMMA_REJET_EG);
   const days = useMemo(() => Math.max(7, Math.min(730, Math.round((ELECTION_DATE.getTime() - Date.now()) / 86_400_000))), []);
 
   // Charger les données depuis Supabase au mount

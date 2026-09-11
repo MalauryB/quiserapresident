@@ -7,7 +7,7 @@ import type {
   DuelProbability,
   SecondRoundSummary,
 } from "@/types/simulation";
-import { SIM_COUNT } from "@/lib/constants";
+import { SIM_COUNT, GAMMA_REJET_ED, GAMMA_REJET_EG } from "@/lib/constants";
 
 // ================================================================
 // Port TypeScript du modèle R « simulations : courbes + 2nd tour »
@@ -122,8 +122,8 @@ const DEFAULT_CONFIG: SimConfig = {
   lambda_drift: 5,
   beta_2: 7,
   alpha_nonexpr: -2.259515,
-  gamma_rejet_ED: 4.909898,
-  gamma_rejet_EG: 2.240084,
+  gamma_rejet_ED: GAMMA_REJET_ED,
+  gamma_rejet_EG: GAMMA_REJET_EG,
   lambda_cos_2: 3,
 };
 

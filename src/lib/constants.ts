@@ -110,3 +110,12 @@ export const ELECTION_DATE = new Date(2027, 3, 10); // 10 avril 2027
 // À 500, le bruit d'échantillonnage atteignait 7 points sur P(victoire) ; à 1500
 // il retombe à 2,7. Au-delà le gain devient marginal (2,3 à S=3000) pour un coût double.
 export const SIM_COUNT = 1500;
+
+// Intensité du barrage au second tour, par extrême. Source unique : simulation.ts
+// les prend comme défaut de DEFAULT_CONFIG, simulation-context.tsx comme état
+// initial des curseurs de l'étape « Barrage » (bornes 0–10, pas 0,1).
+// Elles étaient auparavant dupliquées et avaient divergé (4.909898 côté modèle,
+// 4.909881 côté contexte — c'est ce dernier qui l'emportait, le contexte passant
+// toujours ses valeurs à generateSimData).
+export const GAMMA_REJET_ED = 6;
+export const GAMMA_REJET_EG = 8;

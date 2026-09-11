@@ -111,11 +111,18 @@ export const ELECTION_DATE = new Date(2027, 3, 10); // 10 avril 2027
 // il retombe à 2,7. Au-delà le gain devient marginal (2,3 à S=3000) pour un coût double.
 export const SIM_COUNT = 1500;
 
-// Intensité du barrage au second tour, par extrême. Source unique : simulation.ts
-// les prend comme défaut de DEFAULT_CONFIG, simulation-context.tsx comme état
-// initial des curseurs de l'étape « Barrage » (bornes 0–10, pas 0,1).
-// Elles étaient auparavant dupliquées et avaient divergé (4.909898 côté modèle,
-// 4.909881 côté contexte — c'est ce dernier qui l'emportait, le contexte passant
-// toujours ses valeurs à generateSimData).
-export const GAMMA_REJET_ED = 5.5;
-export const GAMMA_REJET_EG = 2.4;
+// Intensité du barrage au second tour, par extrême : rho = ED × droite + EG × gauche.
+// Ce sont les valeurs de référence du modèle R d'origine (Model.R, parms$sec_t),
+// où l'extrême droite est nettement plus rejetée que la gauche radicale.
+//
+// Source unique : simulation.ts les prend comme défaut de DEFAULT_CONFIG, et
+// simulation-context.tsx comme état initial des curseurs de l'étape « Barrage »
+// (bornes 0–10, pas de 0,1) — ce ne sont donc que des points de départ, le
+// visiteur reste libre de les régler.
+//
+// Elles étaient auparavant dupliquées entre ces deux fichiers et avaient divergé :
+// 4.909898 côté modèle, 4.909881 côté contexte. C'est cette dernière qui
+// l'emportait en pratique, le contexte passant toujours ses valeurs à
+// generateSimData — soit une erreur de transcription de la référence R.
+export const GAMMA_REJET_ED = 4.909898;
+export const GAMMA_REJET_EG = 2.240084;

@@ -9,6 +9,14 @@ const withSerwist = withSerwistInit({
 
 export default withSerwist({
   images: {
+    // L'optimisation Vercel renvoyait 402 (OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED) :
+    // le quota du plan est épuisé. Les photos déjà en cache continuaient de s'afficher,
+    // mais toute source neuve échouait — d'où les portraits manquants de Villepin et
+    // Dupont-Aignan. Les fichiers sont donc servis directement depuis Supabase.
+    // Contrepartie : ils sont livrés à leur taille d'origine (90 à 330 Ko pour un rendu
+    // de 260 px). Les redimensionner en amont (~500 px de large) rendrait ce réglage
+    // indolore.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",

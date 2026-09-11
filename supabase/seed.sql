@@ -30,27 +30,27 @@ INSERT INTO parti (tag, nom, actif, couleur_fond, couleur_texte, couleur_accent,
 -- 3. Candidats (variantes) — valeurs alignées sur le modèle R v3
 INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales, sonde_individuellement, groupe_sondage, attractivite, tendance, ideologie_gauche, ideologie_centre, ideologie_droite, taux_barrage, start_agrege, start_debiaise, start_personnalise, photo_url) VALUES
   -- LFI  (R: Ideo=(1,0,0), delta=0.5, psi=1, v0=0.12)
-  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  1.0,  0.0,  0.0,  0.35, 14.8, 13, 14.8, NULL),
+  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  0.95,  0.05,  0.00,  0.35, 14.8, 13, 14.8, NULL),
   -- PCF  (absent des seeds antérieurs : le bloc ne vivait que dans constants.ts)
-  ('pcf-0',  'PCF',  0, 'Fabien Roussel',     'Roussel',     'FRo', false, NULL,                 0.2,  0.3,  0.8,  0.0,  0.2,  0.15,  1.8,  2,  1.8, NULL),
+  ('pcf-0',  'PCF',  0, 'Fabien Roussel',     'Roussel',     'FRo', false, NULL,                 0.2,  0.3,  0.90,  0.10,  0.10,  0.15,  1.8,  2,  1.8, NULL),
   -- EELV (R: Ideo=(0.8,0.2,0), delta=0, psi=0, v0=0.09)
-  ('eelv-0', 'EELV', 0, 'Marine Tondelier',   'Tondelier',   'MT',  false, 'Les Écologistes',           0.0,  0.5,  0.8,  0.2,  0.0,  0.1,   2.7,  9,  2.7, NULL),
+  ('eelv-0', 'EELV', 0, 'Marine Tondelier',   'Tondelier',   'MT',  false, 'Les Écologistes',           0.0,  0.5,  0.85,  0.20,  0.00,  0.1,   2.7,  9,  2.7, NULL),
   -- PS   (R: Ideo=(0.5,0.5,0), delta=0, psi=0.5, v0=0.135)
-  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.5,  0.5,  0.0,  0.08, 9.7, 14, 9.7, NULL),
+  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.70,  0.45,  0.05,  0.08, 9.7, 14, 9.7, NULL),
   -- REN  (R: Ideo=(0,1,0), delta=-0.5, psi=0, v0=0.17)
-  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.0,  1.0,  0.0,  0.0,  10, 15, 10, NULL),
+  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.30,  0.85,  0.40,  0.0,  10, 15, 10, NULL),
   -- HOR  (Édouard Philippe se présente séparément d'Attal)
-  ('hor-0',  'HOR',  0, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.0,  1.0,  0.0,  0.0,  14.6, 17, 14.6, NULL),
+  ('hor-0',  'HOR',  0, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.15,  0.70,  0.55,  0.0,  14.6, 17, 14.6, NULL),
   -- LR   (R: Ideo=(0,0.3,0.7), delta=0.2, psi=0.5, v0=0.08)
-  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.0,  0.3,  0.7,  0.25,  7,  9,  7, NULL),
+  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.00,  0.30,  0.85,  0.25,  7,  9,  7, NULL),
   -- DVD  (Villepin, sans parti — gaulliste)
-  ('dvd-0',  'DVD',  0, 'Dominique de Villepin', 'Villepin', 'DdV', false, NULL,                 0.4,  0.45, 0.0,  0.7,  0.3,  0.1,   3.2, 3.5, 3.2, NULL),
+  ('dvd-0',  'DVD',  0, 'Dominique de Villepin', 'Villepin', 'DdV', false, NULL,                 0.4,  0.45, 0.25,  0.60,  0.50,  0.1,   3.2, 3.5, 3.2, NULL),
   -- DLF  (droite=0.75 et non 0.9 : à 0.9 le cosinus avec le RN vaut 1)
-  ('dlf-0',  'DLF',  0, 'Nicolas Dupont-Aignan', 'Dupont-Aignan', 'NDA', false, NULL,            0.3,  0.3,  0.0,  0.25, 0.75, 0.3,   2.7,  3,  2.7, NULL),
+  ('dlf-0',  'DLF',  0, 'Nicolas Dupont-Aignan', 'Dupont-Aignan', 'NDA', false, NULL,            0.3,  0.3,  0.05,  0.15, 0.85, 0.3,   2.7,  3,  2.7, NULL),
   -- RN   (R: Ideo=(0,0,1), delta=-0.2, psi=0, v0=0.35)
-  ('rn-0',   'RN',   0, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.0,  0.0,  1.0,  0.5,  30.8, 33, 30.8, NULL),
+  ('rn-0',   'RN',   0, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.10,  0.10,  0.90,  0.5,  30.8, 33, 30.8, NULL),
   -- REC  (R: Ideo=(0,0,1), delta=0, psi=0, v0=0.055)
-  ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.0,  0.0,  1.0,  0.5,  2.7, 5, 2.7, NULL);
+  ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.00,  0.00,  1.00,  0.5,  2.7, 5, 2.7, NULL);
 
 -- 3b. Dynamique (delta du modèle). Colonne distincte de tendance, qui porte
 --     une autre grandeur du modèle R et n'est pas modifiée ici.

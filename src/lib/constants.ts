@@ -11,67 +11,78 @@ export const PARTY_COLORS: Record<string, PartyColors> = {
   RN: { bg: "#1B2A4A", fg: "#EEEDFF", accent: "#002395", chart: "#002395" },
   REC: { bg: "#1a1a2e", fg: "#FFFFFF", accent: "#2D2D5E", chart: "#2D2D5E" },
   PCF: { bg: "#DD0000", fg: "#FFFFFF", accent: "#BB0000", chart: "#DD0000" },
+  HOR: { bg: "#E07B39", fg: "#1a1a1a", accent: "#A85A1E", chart: "#E07B39" },
+  DVD: { bg: "#7B5EA7", fg: "#FFFFFF", accent: "#5E4682", chart: "#7B5EA7" },
+  DLF: { bg: "#3F6B8A", fg: "#FFFFFF", accent: "#2E5068", chart: "#3F6B8A" },
 };
 
 export const DEFAULT_PARTIES: PartyData[] = [
   {
     tag: "LFI", party: "La France Insoumise", active: true, selectedIdx: 0,
     variants: [
-      { name: "Jean-Luc Mélenchon", shortName: "Mélenchon", initials: "Mélenchon", polled: true, pollGroup: null, dynamique: 0.5, left: 1.0, center: 0.0, right: 0.0, startAgrege: 14.5, startCustom: 14.5, photoUrl: `${PHOTO_BASE}jean-luc-melenchon.jpg` },
-      { name: "Clémence Guetté", shortName: "Guetté", initials: "Guetté", polled: false, pollGroup: null, dynamique: 0.5, left: 1.0, center: 0.0, right: 0.0, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}clemence-guette.jpg` },
-      { name: "Manuel Bompard", shortName: "Bompard", initials: "Bompard", polled: false, pollGroup: null, dynamique: 0.3, left: 1.0, center: 0.0, right: 0.0, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}manuel-bompard.jpg` },
+      { name: "Jean-Luc Mélenchon", shortName: "Mélenchon", initials: "Mélenchon", polled: true, pollGroup: null, dynamique: 0.5, left: 1.0, center: 0.0, right: 0.0, startAgrege: 14.8, startCustom: 14.8, photoUrl: `${PHOTO_BASE}jean-luc-melenchon.jpg` },
     ],
   },
   {
     tag: "PCF", party: "Parti Communiste Français", active: true, selectedIdx: 0,
     variants: [
-      { name: "Fabien Roussel", shortName: "Roussel", initials: "Roussel", polled: false, pollGroup: null, dynamique: 0.0, left: 0.8, center: 0.0, right: 0.2, startAgrege: 3.5, startCustom: 3.5, photoUrl: `${PHOTO_BASE}fabien-roussel.jpg` },
+      { name: "Fabien Roussel", shortName: "Roussel", initials: "Roussel", polled: false, pollGroup: null, dynamique: 0.0, left: 0.8, center: 0.0, right: 0.2, startAgrege: 1.8, startCustom: 1.8, photoUrl: `${PHOTO_BASE}fabien-roussel.jpg` },
     ],
   },
   {
-    tag: "EELV", party: "Primaire union de la gauche", active: true, selectedIdx: 0,
+    tag: "EELV", party: "Les Écologistes", active: true, selectedIdx: 0,
     variants: [
-      { name: "Marine Tondelier", shortName: "Tondelier", initials: "Tondelier", polled: false, pollGroup: "Les Écologistes", dynamique: 0.0, left: 0.7, center: 0.3, right: 0.0, startAgrege: 3, startCustom: 3, photoUrl: `${PHOTO_BASE}marine-tondelier.jpg` },
-      { name: "François Ruffin", shortName: "Ruffin", initials: "Ruffin", polled: false, pollGroup: "Debout", dynamique: 0.1, left: 0.8, center: 0.2, right: 0.0, startAgrege: 7, startCustom: 7, photoUrl: `${PHOTO_BASE}francois-ruffin.jpg` },
-      { name: "Clémentine Autain", shortName: "Autain", initials: "Autain", polled: false, pollGroup: "L'Après", dynamique: 0.0, left: 0.8, center: 0.2, right: 0.0, startAgrege: 5, startCustom: 5, photoUrl: `${PHOTO_BASE}clementine-autain.jpg` },
-      { name: "Olivier Faure", shortName: "Faure", initials: "Faure", polled: false, pollGroup: "Parti Socialiste", dynamique: 0.1, left: 0.6, center: 0.4, right: 0.0, startAgrege: 7, startCustom: 7, photoUrl: `${PHOTO_BASE}olivier-faure.jpg` },
-      { name: "BadMulch", shortName: "BadMulch", initials: "BadMulch", polled: false, pollGroup: null, dynamique: 1.0, left: 1.0, center: 0.0, right: 0.0, startAgrege: 20, startCustom: 20, photoUrl: `${PHOTO_BASE}badmulch.jpg` },
+      { name: "Marine Tondelier", shortName: "Tondelier", initials: "Tondelier", polled: false, pollGroup: "Les Écologistes", dynamique: 0.0, left: 0.7, center: 0.3, right: 0.0, startAgrege: 2.7, startCustom: 2.7, photoUrl: `${PHOTO_BASE}marine-tondelier.jpg` },
     ],
   },
   {
     tag: "PS", party: "PS / Place Publique", active: true, selectedIdx: 0,
     variants: [
-      { name: "Raphaël Glucksmann", shortName: "Glucksmann", initials: "Glucksmann", polled: true, pollGroup: "Place Publique", dynamique: -0.2, left: 0.3, center: 0.7, right: 0.0, startAgrege: 10.5, startCustom: 10.5, photoUrl: `${PHOTO_BASE}raphael-glucksmann.jpg` },
-      { name: "François Hollande", shortName: "Hollande", initials: "Hollande", polled: false, pollGroup: "Parti Socialiste", dynamique: 0.3, left: 0.2, center: 0.8, right: 0.0, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}francois-hollande.jpg` },
-      { name: "Boris Vallaud", shortName: "Vallaud", initials: "Vallaud", polled: false, pollGroup: "Parti Socialiste", dynamique: 0.3, left: 0.5, center: 0.5, right: 0.0, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}boris-vallaud.jpg` },
+      { name: "Raphaël Glucksmann", shortName: "Glucksmann", initials: "Glucksmann", polled: true, pollGroup: "Place Publique", dynamique: -0.2, left: 0.3, center: 0.7, right: 0.0, startAgrege: 9.7, startCustom: 9.7, photoUrl: `${PHOTO_BASE}raphael-glucksmann.jpg` },
     ],
   },
   {
-    tag: "REN", party: "Renaissance / Horizons", active: true, selectedIdx: 1,
+    tag: "REN", party: "Renaissance", active: true, selectedIdx: 0,
     variants: [
-      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: -0.5, left: 0.0, center: 1.0, right: 0.0, startAgrege: 12, startCustom: 12, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
-      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: -0.5, left: 0.0, center: 0.8, right: 0.2, startAgrege: 16, startCustom: 16, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
+      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: -0.5, left: 0.0, center: 1.0, right: 0.0, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
+    ],
+  },
+  {
+    tag: "HOR", party: "Horizons", active: true, selectedIdx: 0,
+    variants: [
+      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: -0.5, left: 0.0, center: 0.8, right: 0.2, startAgrege: 14.6, startCustom: 14.6, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
+    ],
+  },
+  {
+    tag: "DVD", party: "Divers droite", active: true, selectedIdx: 0,
+    variants: [
+      { name: "Dominique de Villepin", shortName: "Villepin", initials: "Villepin", polled: false, pollGroup: null, dynamique: 0.3, left: 0.0, center: 0.7, right: 0.3, startAgrege: 3.2, startCustom: 3.2, photoUrl: `${PHOTO_BASE}dominique-de-villepin.jpg` },
     ],
   },
   {
     tag: "LR", party: "Les Républicains", active: true, selectedIdx: 0,
     variants: [
-      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: 0.5, left: 0.0, center: 0.3, right: 0.7, startAgrege: 9.5, startCustom: 9.5, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
-      { name: "Laurent Wauquiez", shortName: "Wauquiez", initials: "Wauquiez", polled: true, pollGroup: null, dynamique: 0.1, left: 0.0, center: 0.3, right: 0.7, startAgrege: 3, startCustom: 3, photoUrl: `${PHOTO_BASE}laurent-wauquiez.jpg` },
+      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: 0.5, left: 0.0, center: 0.3, right: 0.7, startAgrege: 7, startCustom: 7, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
+    ],
+  },
+  {
+    // center/right à 0.25/0.75 et non 0.1/0.9 : avec les valeurs du RN le cosinus
+    // vaut exactement 1, le modèle traiterait les deux comme interchangeables.
+    tag: "DLF", party: "Debout la France", active: true, selectedIdx: 0,
+    variants: [
+      { name: "Nicolas Dupont-Aignan", shortName: "Dupont-Aignan", initials: "Dupont-Aignan", polled: false, pollGroup: null, dynamique: 0.0, left: 0.0, center: 0.25, right: 0.75, startAgrege: 2.7, startCustom: 2.7, photoUrl: `${PHOTO_BASE}nicolas-dupont-aignan.jpg` },
     ],
   },
   {
     tag: "RN", party: "Rassemblement National", active: true, selectedIdx: 0,
     variants: [
-      { name: "Jordan Bardella", shortName: "Bardella", initials: "Bardella", polled: true, pollGroup: null, dynamique: -0.5, left: 0.0, center: 0.1, right: 0.9, startAgrege: 33, startCustom: 33, photoUrl: `${PHOTO_BASE}jordan-bardella.jpg` },
-      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0.2, left: 0.0, center: 0.1, right: 0.9, startAgrege: 32, startCustom: 32, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
+      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0.2, left: 0.0, center: 0.1, right: 0.9, startAgrege: 30.8, startCustom: 30.8, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
     ],
   },
   {
     tag: "REC", party: "Reconquête", active: true, selectedIdx: 0,
     variants: [
-      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: 0.0, left: 0.0, center: 0.0, right: 1.0, startAgrege: 5.5, startCustom: 5.5, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
-      { name: "Sarah Knafo", shortName: "Knafo", initials: "Knafo", polled: false, pollGroup: "Extrême droite", dynamique: 0.3, left: 0.0, center: 0.0, right: 1.0, startAgrege: 6, startCustom: 6, photoUrl: `${PHOTO_BASE}sarah-knafo.jpg` },
+      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: 0.0, left: 0.0, center: 0.0, right: 1.0, startAgrege: 2.7, startCustom: 2.7, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
     ],
   },
 ];
@@ -94,4 +105,8 @@ export const DEFAULT_COLORS: PartyColors = { bg: "#556C96", fg: "#FFFFFF", accen
 export const ELECTION_DATE = new Date(2027, 3, 10); // 10 avril 2027
 
 
-export const SIM_COUNT = 500;
+// Nombre de tirages Monte-Carlo. Source unique : simulation.ts l'importe pour
+// DEFAULT_CONFIG.S, les pages d'affichage l'importent pour le texte « N simulations ».
+// À 500, le bruit d'échantillonnage atteignait 7 points sur P(victoire) ; à 1500
+// il retombe à 2,7. Au-delà le gain devient marginal (2,3 à S=3000) pour un coût double.
+export const SIM_COUNT = 1500;

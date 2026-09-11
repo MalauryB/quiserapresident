@@ -2,6 +2,17 @@
 -- Migration: Ajouter le champ nom_court
 -- Date: 2026-03-08
 -- Description: Ajoute un champ nom_court pour afficher les noms courts des candidats
+--
+-- ⚠️ OBSOLÈTE — NE PLUS EXÉCUTER (constaté le 2026-09-11)
+--
+-- Les UPDATE ci-dessous ciblent les candidats par id. Or les réorganisations
+-- de blocs de septembre 2026 ont réaffecté ces ids : 'rn-0' est désormais
+-- Marine Le Pen (et non Bardella), 'ps-0' est Olivier Faure (et non
+-- Glucksmann), etc. Rejouer ce script écrirait des noms courts erronés.
+--
+-- Ce fichier n'est conservé que comme trace historique. Pour une base neuve,
+-- seed.sql crée la colonne (ALTER TABLE ... IF NOT EXISTS en tête) et
+-- renseigne nom_court directement dans ses INSERT.
 -- ============================================
 
 -- Ajouter la colonne nom_court

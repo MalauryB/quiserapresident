@@ -7,6 +7,7 @@ import type {
   DuelProbability,
   SecondRoundSummary,
 } from "@/types/simulation";
+import { SIM_COUNT } from "@/lib/constants";
 
 // ================================================================
 // Port TypeScript du modèle R « simulations : courbes + 2nd tour »
@@ -106,7 +107,7 @@ interface SimConfig {
 
 const DEFAULT_CONFIG: SimConfig = {
   T: 365,
-  S: 500,
+  S: SIM_COUNT,
   sigma_f: 0.01368569,
   sigma_eps: 0.01910283,
   days_on: 10,

@@ -117,5 +117,5 @@ export const SIM_COUNT = 1500;
 // Elles étaient auparavant dupliquées et avaient divergé (4.909898 côté modèle,
 // 4.909881 côté contexte — c'est ce dernier qui l'emportait, le contexte passant
 // toujours ses valeurs à generateSimData).
-export const GAMMA_REJET_ED = 6;
-export const GAMMA_REJET_EG = 8;
+export const GAMMA_REJET_ED = 5.5;
+export const GAMMA_REJET_EG = 2.4;

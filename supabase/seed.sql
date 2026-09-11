@@ -6,6 +6,7 @@
 -- 0. Compatibilité : s'assure que les colonnes ajoutées par migration existent
 --    (bases créées avant l'ajout de nom_court)
 ALTER TABLE candidat ADD COLUMN IF NOT EXISTS nom_court VARCHAR;
+ALTER TABLE candidat ADD COLUMN IF NOT EXISTS dynamique FLOAT DEFAULT 0;
 
 -- 1. Nettoyage (candidats d'abord à cause de la FK vers parti)
 DELETE FROM candidat;
@@ -50,6 +51,20 @@ INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales,
   ('rn-0',   'RN',   0, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.0,  0.0,  1.0,  0.5,  30.8, 33, 30.8, NULL),
   -- REC  (R: Ideo=(0,0,1), delta=0, psi=0, v0=0.055)
   ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.0,  0.0,  1.0,  0.5,  2.7, 5, 2.7, NULL);
+
+-- 3b. Dynamique (delta du modèle). Colonne distincte de tendance, qui porte
+--     une autre grandeur du modèle R et n'est pas modifiée ici.
+UPDATE candidat SET dynamique =  0.5 WHERE nom = 'Gabriel Attal';
+UPDATE candidat SET dynamique =  0.4 WHERE nom = 'Jean-Luc Mélenchon';
+UPDATE candidat SET dynamique =  0.3 WHERE nom = 'Raphaël Glucksmann';
+UPDATE candidat SET dynamique =  0.2 WHERE nom = 'Marine Le Pen';
+UPDATE candidat SET dynamique =  0.2 WHERE nom = 'Dominique de Villepin';
+UPDATE candidat SET dynamique = -0.1 WHERE nom = 'Nicolas Dupont-Aignan';
+UPDATE candidat SET dynamique = -0.2 WHERE nom = 'Fabien Roussel';
+UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Bruno Retailleau';
+UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Édouard Philippe';
+UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Éric Zemmour';
+UPDATE candidat SET dynamique = -0.4 WHERE nom = 'Marine Tondelier';
 
 -- 4. Sources de sondage
 INSERT INTO source_sondage (type, libelle, description, icone) VALUES

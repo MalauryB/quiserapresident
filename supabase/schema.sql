@@ -26,6 +26,7 @@ CREATE TABLE candidat (
   groupe_sondage VARCHAR,
   attractivite FLOAT DEFAULT 0,
   tendance FLOAT DEFAULT 0,
+  dynamique FLOAT DEFAULT 0,   -- delta du modèle ; l'API lit dynamique ?? tendance
   ideologie_gauche FLOAT DEFAULT 0,
   ideologie_centre FLOAT DEFAULT 0,
   ideologie_droite FLOAT DEFAULT 0,

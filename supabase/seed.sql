@@ -54,16 +54,16 @@ INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales,
 
 -- 3b. Dynamique (delta du modèle). Colonne distincte de tendance, qui porte
 --     une autre grandeur du modèle R et n'est pas modifiée ici.
-UPDATE candidat SET dynamique =  0.5 WHERE nom = 'Gabriel Attal';
+UPDATE candidat SET dynamique = -0.2 WHERE nom = 'Gabriel Attal';
 UPDATE candidat SET dynamique =  0.4 WHERE nom = 'Jean-Luc Mélenchon';
 UPDATE candidat SET dynamique =  0.3 WHERE nom = 'Raphaël Glucksmann';
-UPDATE candidat SET dynamique =  0.2 WHERE nom = 'Marine Le Pen';
-UPDATE candidat SET dynamique =  0.2 WHERE nom = 'Dominique de Villepin';
+UPDATE candidat SET dynamique =  0.0 WHERE nom = 'Marine Le Pen';
+UPDATE candidat SET dynamique =  0.0 WHERE nom = 'Dominique de Villepin';
 UPDATE candidat SET dynamique = -0.1 WHERE nom = 'Nicolas Dupont-Aignan';
 UPDATE candidat SET dynamique = -0.2 WHERE nom = 'Fabien Roussel';
-UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Bruno Retailleau';
-UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Édouard Philippe';
-UPDATE candidat SET dynamique = -0.3 WHERE nom = 'Éric Zemmour';
+UPDATE candidat SET dynamique = -0.2 WHERE nom = 'Bruno Retailleau';
+UPDATE candidat SET dynamique =  0.0 WHERE nom = 'Édouard Philippe';
+UPDATE candidat SET dynamique = -0.1 WHERE nom = 'Éric Zemmour';
 UPDATE candidat SET dynamique = -0.4 WHERE nom = 'Marine Tondelier';
 
 -- 4. Sources de sondage

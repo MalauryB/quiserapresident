@@ -44,25 +44,25 @@ export const DEFAULT_PARTIES: PartyData[] = [
   {
     tag: "REN", party: "Renaissance", active: true, selectedIdx: 0,
     variants: [
-      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: 0.5, left: 0.2, center: 0.58, right: 0.22, startAgrege: 4.8, startCustom: 4.8, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
+      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: -0.2, left: 0.2, center: 0.58, right: 0.22, startAgrege: 4.8, startCustom: 4.8, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
     ],
   },
   {
     tag: "HOR", party: "Horizons", active: true, selectedIdx: 0,
     variants: [
-      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: -0.3, left: 0.1, center: 0.55, right: 0.35, startAgrege: 15.3, startCustom: 15.3, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
+      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: 0, left: 0.1, center: 0.55, right: 0.35, startAgrege: 15.3, startCustom: 15.3, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
     ],
   },
   {
     tag: "DVD", party: "Divers droite", active: true, selectedIdx: 0,
     variants: [
-      { name: "Dominique de Villepin", shortName: "Villepin", initials: "Villepin", polled: false, pollGroup: null, dynamique: 0.2, left: 0.18, center: 0.5, right: 0.32, startAgrege: 2.9, startCustom: 2.9, photoUrl: `${PHOTO_BASE}dominique-de-villepin.jpg` },
+      { name: "Dominique de Villepin", shortName: "Villepin", initials: "Villepin", polled: false, pollGroup: null, dynamique: 0, left: 0.18, center: 0.5, right: 0.32, startAgrege: 2.9, startCustom: 2.9, photoUrl: `${PHOTO_BASE}dominique-de-villepin.jpg` },
     ],
   },
   {
     tag: "LR", party: "Les Républicains", active: true, selectedIdx: 0,
     variants: [
-      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: -0.3, left: 0.02, center: 0.22, right: 0.76, startAgrege: 7.2, startCustom: 7.2, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
+      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: -0.2, left: 0.02, center: 0.22, right: 0.76, startAgrege: 7.2, startCustom: 7.2, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
     ],
   },
   {
@@ -76,13 +76,13 @@ export const DEFAULT_PARTIES: PartyData[] = [
   {
     tag: "RN", party: "Rassemblement National", active: true, selectedIdx: 0,
     variants: [
-      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0.2, left: 0.08, center: 0.1, right: 0.82, startAgrege: 29.6, startCustom: 29.6, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
+      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0, left: 0.08, center: 0.1, right: 0.82, startAgrege: 29.6, startCustom: 29.6, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
     ],
   },
   {
     tag: "REC", party: "Reconquête", active: true, selectedIdx: 0,
     variants: [
-      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: -0.3, left: 0, center: 0.03, right: 0.97, startAgrege: 3.3, startCustom: 3.3, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
+      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: -0.1, left: 0, center: 0.03, right: 0.97, startAgrege: 3.3, startCustom: 3.3, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
     ],
   },
 ];

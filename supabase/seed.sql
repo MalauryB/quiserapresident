@@ -27,21 +27,21 @@ INSERT INTO parti (tag, nom, actif, couleur_fond, couleur_texte, couleur_accent,
 -- 3. Candidats (variantes) — valeurs alignées sur le modèle R v3
 INSERT INTO candidat (id, parti_tag, indice_variante, nom, nom_court, initiales, sonde_individuellement, groupe_sondage, attractivite, tendance, ideologie_gauche, ideologie_centre, ideologie_droite, taux_barrage, start_agrege, start_debiaise, start_personnalise, photo_url) VALUES
   -- LFI  (R: Ideo=(1,0,0), delta=0.5, psi=1, v0=0.12)
-  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  0.92,  0.08,  0.00,  0.35, 18, 13, 18, NULL),
+  ('lfi-0',  'LFI',  0, 'Jean-Luc Mélenchon', 'Mélenchon',   'JLM', true,  NULL,                       1.0,  1.0,  0.92,  0.08,  0.00,  0.35, 21.2, 13, 21.2, NULL),
   -- PS   (R: Ideo=(0.5,0.5,0), delta=0, psi=0.5, v0=0.135)
-  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.58,  0.38,  0.04,  0.08, 11, 14, 11, NULL),
+  ('ps-0',   'PS',   0, 'Raphaël Glucksmann', 'Glucksmann',  'RG',  true,  'Place Publique',            0.5,  0.5,  0.58,  0.38,  0.04,  0.08, 13.9, 14, 13.9, NULL),
   -- REN  (R: Ideo=(0,1,0), delta=-0.5, psi=0, v0=0.17)
-  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.20,  0.58,  0.22,  0.0,  6.5, 15, 6.5, NULL),
+  ('ren-0',  'REN',  0, 'Gabriel Attal',      'Attal',       'GA',  true,  'Renaissance',               0.0,  0.0,  0.20,  0.58,  0.22,  0.0,  5.5, 15, 5.5, NULL),
   -- HOR  (Édouard Philippe se présente séparément d'Attal)
-  ('hor-0',  'HOR',  0, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.10,  0.55,  0.35,  0.0,  10, 17, 10, NULL),
+  ('hor-0',  'HOR',  0, 'Édouard Philippe',   'Philippe',    'ÉP',  true,  'Horizons',                  0.1,  0.1,  0.10,  0.55,  0.35,  0.0,  9.6, 17, 9.6, NULL),
   -- LR   (R: Ideo=(0,0.3,0.7), delta=0.2, psi=0.5, v0=0.08)
-  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.02,  0.22,  0.76,  0.25,  6, 9, 6, NULL),
+  ('lr-0',   'LR',   0, 'Bruno Retailleau',   'Retailleau',  'BR',  true,  NULL,                        0.5,  0.7,  0.02,  0.22,  0.76,  0.25,  4.2, 9, 4.2, NULL),
   -- DVD  (David Lisnard, Nouvelle Énergie — tag DVD conservé pour les couleurs)
-  ('dvd-0',  'DVD',  0, 'David Lisnard',      'Lisnard',     'DL',  true,  'Nouvelle Énergie',          0.4,  0.5,  0.04,  0.36,  0.60,  0.2,   8.5, 6.7, 8.5, NULL),
+  ('dvd-0',  'DVD',  0, 'David Lisnard',      'Lisnard',     'DL',  true,  'Nouvelle Énergie',          0.4,  0.5,  0.04,  0.36,  0.60,  0.2,   6.7, 6.7, 6.7, NULL),
   -- RN   (R: Ideo=(0,0,1), delta=-0.2, psi=0, v0=0.35)
-  ('rn-0',   'RN',   0, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.08,  0.10,  0.82,  0.5,  36, 33, 36, NULL),
+  ('rn-0',   'RN',   0, 'Marine Le Pen',      'Le Pen',      'MLP', true,  NULL,                        0.1,  0.35, 0.08,  0.10,  0.82,  0.5,  35.2, 33, 35.2, NULL),
   -- REC  (R: Ideo=(0,0,1), delta=0, psi=0, v0=0.055)
-  ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.00,  0.03,  0.97,  0.5,  4, 5, 4, NULL);
+  ('rec-0',  'REC',  0, 'Éric Zemmour',       'Zemmour',     'ÉZ',  true,  NULL,                        0.0,  0.5,  0.00,  0.03,  0.97,  0.5,  3.7, 5, 3.7, NULL);
 
 -- 3b. Dynamique (delta du modèle). Colonne distincte de tendance, qui porte
 --     une autre grandeur du modèle R et n'est pas modifiée ici.

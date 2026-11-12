@@ -20,50 +20,50 @@ export const DEFAULT_PARTIES: PartyData[] = [
   {
     tag: "LFI", party: "La France Insoumise", active: true, selectedIdx: 0,
     variants: [
-      { name: "Jean-Luc Mélenchon", shortName: "Mélenchon", initials: "Mélenchon", polled: true, pollGroup: null, dynamique: 0.4, left: 0.92, center: 0.08, right: 0, startAgrege: 18, startCustom: 18, photoUrl: `${PHOTO_BASE}jean-luc-melenchon.jpg` },
+      { name: "Jean-Luc Mélenchon", shortName: "Mélenchon", initials: "Mélenchon", polled: true, pollGroup: null, dynamique: 0.4, left: 0.92, center: 0.08, right: 0, startAgrege: 21.2, startCustom: 21.2, photoUrl: `${PHOTO_BASE}jean-luc-melenchon.jpg` },
     ],
   },
   {
     tag: "PS", party: "PS / Place Publique", active: true, selectedIdx: 0,
     variants: [
-      { name: "Raphaël Glucksmann", shortName: "Glucksmann", initials: "Glucksmann", polled: true, pollGroup: "Place Publique", dynamique: -0.1, left: 0.58, center: 0.38, right: 0.04, startAgrege: 11, startCustom: 11, photoUrl: `${PHOTO_BASE}raphael-glucksmann.jpg` },
+      { name: "Raphaël Glucksmann", shortName: "Glucksmann", initials: "Glucksmann", polled: true, pollGroup: "Place Publique", dynamique: -0.1, left: 0.58, center: 0.38, right: 0.04, startAgrege: 13.9, startCustom: 13.9, photoUrl: `${PHOTO_BASE}raphael-glucksmann.jpg` },
     ],
   },
   {
     tag: "REN", party: "Renaissance", active: true, selectedIdx: 0,
     variants: [
-      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: -0.2, left: 0.2, center: 0.58, right: 0.22, startAgrege: 6.5, startCustom: 6.5, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
+      { name: "Gabriel Attal", shortName: "Attal", initials: "Attal", polled: true, pollGroup: "Renaissance", dynamique: -0.2, left: 0.2, center: 0.58, right: 0.22, startAgrege: 5.5, startCustom: 5.5, photoUrl: `${PHOTO_BASE}gabriel-attal.jpg` },
     ],
   },
   {
     tag: "HOR", party: "Horizons", active: true, selectedIdx: 0,
     variants: [
-      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: -0.2, left: 0.1, center: 0.55, right: 0.35, startAgrege: 10, startCustom: 10, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
+      { name: "Édouard Philippe", shortName: "Philippe", initials: "Philippe", polled: true, pollGroup: "Horizons", dynamique: -0.2, left: 0.1, center: 0.55, right: 0.35, startAgrege: 9.6, startCustom: 9.6, photoUrl: `${PHOTO_BASE}edouard-philippe.jpg` },
     ],
   },
   {
     // Tag DVD conservé (couleurs déjà en place) ; le bloc porte désormais Lisnard.
     tag: "DVD", party: "Nouvelle Énergie", active: true, selectedIdx: 0,
     variants: [
-      { name: "David Lisnard", shortName: "Lisnard", initials: "Lisnard", polled: true, pollGroup: "Nouvelle Énergie", dynamique: 0.3, left: 0.04, center: 0.36, right: 0.6, startAgrege: 8.5, startCustom: 8.5, photoUrl: `${PHOTO_BASE}david-lisnard.jpg` },
+      { name: "David Lisnard", shortName: "Lisnard", initials: "Lisnard", polled: true, pollGroup: "Nouvelle Énergie", dynamique: 0.3, left: 0.04, center: 0.36, right: 0.6, startAgrege: 6.7, startCustom: 6.7, photoUrl: `${PHOTO_BASE}david-lisnard.jpg` },
     ],
   },
   {
     tag: "LR", party: "Les Républicains", active: true, selectedIdx: 0,
     variants: [
-      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: -0.2, left: 0.02, center: 0.22, right: 0.76, startAgrege: 6, startCustom: 6, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
+      { name: "Bruno Retailleau", shortName: "Retailleau", initials: "Retailleau", polled: true, pollGroup: null, dynamique: -0.2, left: 0.02, center: 0.22, right: 0.76, startAgrege: 4.2, startCustom: 4.2, photoUrl: `${PHOTO_BASE}bruno-retailleau.jpg` },
     ],
   },
   {
     tag: "RN", party: "Rassemblement National", active: true, selectedIdx: 0,
     variants: [
-      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0, left: 0.08, center: 0.1, right: 0.82, startAgrege: 36, startCustom: 36, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
+      { name: "Marine Le Pen", shortName: "Le Pen", initials: "Le Pen", polled: true, pollGroup: null, dynamique: 0, left: 0.08, center: 0.1, right: 0.82, startAgrege: 35.2, startCustom: 35.2, photoUrl: `${PHOTO_BASE}marine-le-pen.jpg` },
     ],
   },
   {
     tag: "REC", party: "Reconquête", active: true, selectedIdx: 0,
     variants: [
-      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: -0.1, left: 0, center: 0.03, right: 0.97, startAgrege: 4, startCustom: 4, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
+      { name: "Éric Zemmour", shortName: "Zemmour", initials: "Zemmour", polled: true, pollGroup: null, dynamique: -0.1, left: 0, center: 0.03, right: 0.97, startAgrege: 3.7, startCustom: 3.7, photoUrl: `${PHOTO_BASE}eric-zemmour.jpg` },
     ],
   },
 ];
